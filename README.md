@@ -12,7 +12,7 @@ The following algorithms were implemented.
 - Static ALWAYS NOT TAKEN Branch Predictor (Static-NT): All branches are predicted to be not taken.
 - Dynamic BIMODAL Branch Predictor (Dynamic-BM): The simplest dynamic branch direction predictor is an array of 2^n two-bit saturating counters. 
 - Dynamic BIMODAL Branch Predictor with Global Branch History (Dynamic-GSHARE): A more advanced dynamic branch predictor that uses the history of recently executed branches to predict the next branch.
-- Dynamic NEURAL NETWORK using Perceptrons (Dynamic-NN): An adaptive neural network that contains dynamic predictor which uses a list of perceptrons to perform branch predictions.
+- Dynamic NEURAL NETWORK using Perceptrons (Dynamic-NN): An adaptive neural network that contains dynamic predictor which uses a list of perceptrons to perform branch predictions. This designed unique algorithm can work on any hardware and trace.
 
 Developed as a part of an assignment for the course EE 318 – Computer Architecture and Design.
 
@@ -60,23 +60,23 @@ Provide the filepath for the trace (along with quotes " "): "<input-file-path-he
 
 Results can viewed in the ```results``` file in each predictor folder. It contains the accuracy of that predictor in a line-by-line fashion for the 16 traces.
 
-Comparision in decreasing reliablity: Dyanmic-NN >> Dynamic-GSHARE > Dynamic-BM >> Static-T >= Static-NT
+#### Comparison in decreasing reliablity: Dynamic-NN >> Dynamic-GSHARE > Dynamic-BM >> Static-T >= Static-NT
 
-The output formats in the ```result``` file for each predictor is explained below.
+The output formats in the ```results``` file for each predictor is explained below.
 
-#### Static-T
+### Static-T
 Direct accuracy reported in single value for a trace. 
 
-#### Static-NT
+### Static-NT
 Direct accuracy reported in single value for a trace.
 
-#### Dynamic-BM
+### Dynamic-BM
 Direct accuracy reported with 7 different table size (8, 16, 32, 128, 256, 512, and 1024 entries) for a trace.
 
-#### Dynamic-GSHARE
+### Dynamic-GSHARE
 Direct accuracy reported with 9 different global register size range from 2 bits to 10 bits for a table size of 1024 entries for a trace.
 
-#### Dynamic-NN
+### Dynamic-NN
 Direct accuracy reported in a single value when the number of unique addresses are unknown for a trace. If the number of unique addresses are known for a trace, then a commented out function in the code file ```AdaptivePredictor.py``` can be used to achieve accuracy in that scenario.
 
 ## Contributing
