@@ -6,7 +6,7 @@
 
 Implementation of several Branch Prediction algorithms and analysis on their effectiveness on real-world program traces.
 
-The following algorithms were implemented.
+The following algorithms were implemented:
 
 - **Static ALWAYS TAKEN Branch Predictor (Static-T)**: All branches are predicted to be taken
 - **Static ALWAYS NOT TAKEN Branch Predictor (Static-NT)**: All branches are predicted to be not taken.
@@ -19,6 +19,21 @@ Developed as a part of an assignment for the course EE 318 – Computer Architec
 ###### Note 
 Developed with C++ and Python 3.9.2.
 Editor used was Visual Studio Code 1.55.1.
+
+## Table of contents
+
+* [License](#license)
+* [Setup](#setup)
+  * [Traces](#traces)
+  * [Static and Dynamic predictors (except Dynamic Neural Network)](#static-and-dynamic-predictors-except-Dynamic-Neural-network)
+  * [Dynamic Neural Network](#dynamic-neural-network)
+* [Results](#results)
+    * [Static-T](#static-t)
+    * [Static-NT](#static-nt)
+    * [Dynamic-BM](#dynamic-bm)
+    * [Dynamic-GSHARE](#dynamic-gshare)
+    * [Dynamic-NN](#dynamic-nn)
+* [Contributing](#contributing)
 
 ## License
 This project is licensed under the MIT License, a short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications and larger works may be distributed under different terms and without source code.
@@ -42,11 +57,7 @@ $ ./predictor <InputFilename> <OutputFilename>
 ```OutputFilename``` is the file where the result is printed to.
 
 ### Dynamic Neural Network
-- Install Python 3.9.2.
-- Run this command. This following command will most likely be unnecessary since most of the libraries used are basic. 
-```bash 
-$ pip3 install requirements.txt
-```
+- Install Python 3.9.2 (preferred).
 - Run the following command in terminal/console window:
 ```bash
 $ python AdaptivePredictor.py
@@ -62,7 +73,9 @@ Results can viewed in the ```results``` file in each predictor folder. It contai
 
 #### Comparison in decreasing reliablity: Dynamic-NN >> Dynamic-GSHARE > Dynamic-BM >> Static-T >= Static-NT
 
-The output formats in the ```results``` file for each predictor is explained below.
+Results are also showcased in the MS Word document named ```Branch Prediction Programming Report.docx```.
+
+The output formats in the ```results``` file for each predictor are explained below.
 
 ### Static-T
 Direct accuracy reported in single value for a trace. 
