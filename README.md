@@ -8,11 +8,11 @@ Implementation of several Branch Prediction algorithms and analysis on their eff
 
 The following algorithms were implemented.
 
-- Static ALWAYS TAKEN Branch Predictor (Static-T): All branches are predicted to be taken
-- Static ALWAYS NOT TAKEN Branch Predictor (Static-NT): All branches are predicted to be not taken.
-- Dynamic BIMODAL Branch Predictor (Dynamic-BM): The simplest dynamic branch direction predictor is an array of 2^n two-bit saturating counters. 
-- Dynamic BIMODAL Branch Predictor with Global Branch History (Dynamic-GSHARE): A more advanced dynamic branch predictor that uses the history of recently executed branches to predict the next branch.
-- Dynamic NEURAL NETWORK using Perceptrons (Dynamic-NN): An adaptive neural network that contains dynamic predictor which uses a list of perceptrons to perform branch predictions. This designed unique algorithm can work on any hardware and trace.
+- **Static ALWAYS TAKEN Branch Predictor (Static-T)**: All branches are predicted to be taken
+- **Static ALWAYS NOT TAKEN Branch Predictor (Static-NT)**: All branches are predicted to be not taken.
+- **Dynamic BIMODAL Branch Predictor (Dynamic-BM)**: The simplest dynamic branch direction predictor is an array of 2^n two-bit saturating counters. 
+- **Dynamic BIMODAL Branch Predictor with Global Branch History (Dynamic-GSHARE)**: A more advanced dynamic branch predictor that uses the history of recently executed branches to predict the next branch.
+- **Dynamic NEURAL NETWORK using Perceptrons (Dynamic-NN)**: An adaptive neural network that contains dynamic predictor which uses a list of perceptrons to perform branch predictions. This designed unique algorithm can work on any hardware and trace.
 
 Developed as a part of an assignment for the course EE 318 – Computer Architecture and Design.
 
